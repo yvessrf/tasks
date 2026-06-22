@@ -27,3 +27,7 @@ jobs:
       - name: Run basic import test
         run: |
           python -c "from app.main import app; print('API OK')"
+      
+      - name: Build Docker image
+        run: |
+          docker build -t devops-api .
